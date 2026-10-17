@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 const footerLinks = [
   { label: "CLARA for Plane", href: links.plane },
   { label: "CLARA for Confluence", href: links.confluence },
+  { label: "CLARA for GitLab", href: links.gitlab },
 ];
 
 export function Footer() {
@@ -18,10 +19,9 @@ export function Footer() {
               CLARA
             </Text>
             <Text size="sm" variant="muted" className="leading-relaxed">
-              Named for the Latin <em>clarus</em>, &ldquo;clear.&rdquo; An internal
-              ProductOps tool for DSTA programme teams &mdash; cited research
-              artefacts across Research, Design, and Test phases, drafted from
-              the knowledge base they already own.
+              Named after the Latin <em>clarus</em>, &ldquo;clear.&rdquo; An
+              AI-enabled product intelligence tool &mdash; cited research
+              artefacts across Research, Design, and Test phases.
             </Text>
           </div>
 
@@ -45,7 +45,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between gap-4 text-xs">
           <Text size="xs" variant="subtle">
-            Developed by the DSTA ProductOps team.
+            Developed by DSTA.
           </Text>
           <Text size="xs" variant="subtle">
             Designed with the PRIZM design system &middot; Enterprise light.

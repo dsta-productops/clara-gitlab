@@ -1,8 +1,8 @@
 import { ArtefactCatalogue } from "./sections/artefact-catalogue";
-import { Deploy } from "./sections/deploy";
 import { Footer } from "./sections/footer";
 import { Hero } from "./sections/hero";
 import { HowClaraThinks } from "./sections/how-clara-thinks";
+import { QuickStart } from "./sections/quick-start";
 import { TopNav } from "./sections/top-nav";
 import { WhereClaraEarns } from "./sections/where-clara-earns";
 
@@ -15,7 +15,7 @@ export default function Home() {
         <HowClaraThinks />
         <WhereClaraEarns />
         <ArtefactCatalogue />
-        <Deploy />
+        <QuickStart />
       </main>
       <Footer />
     </>
