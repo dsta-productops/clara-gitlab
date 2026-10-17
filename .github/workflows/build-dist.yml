@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - "core/**"
+      - "scripts/**"
       - "package.json"
       - ".github/workflows/build-dist.yml"
   workflow_dispatch:

@@ -1,11 +1,11 @@
 {
-  "name": "clara-confluence",
+  "name": "clara-gitlab",
   "version": "0.1.0",
   "private": true,
-  "description": "CLARA for Confluence — thin platform build over dsta-productops/clara.",
+  "description": "CLARA for the GitLab wiki — self-contained install bundle built from dsta-productops/clara.",
   "type": "module",
   "scripts": {
-    "build": "CLARA_PLATFORM=confluence CLARA_OUT=dist tsx core/build/build.ts",
+    "build": "tsx scripts/build-gitlab.ts",
     "core:pull": "git subtree pull --prefix=core https://github.com/dsta-productops/clara.git main --squash"
   },
   "devDependencies": {
