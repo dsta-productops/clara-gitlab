@@ -9,15 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Text } from "@/components/ui/text";
 import { links } from "@/content/links";
 import { stackPatterns } from "@/content/stack-patterns";
-import {
-  ArrowUpRight,
-  CheckCircle2,
-  FileText,
-  GitBranch,
-  Plug,
-  RefreshCcw,
-  ShieldAlert,
-} from "lucide-react";
+import { ArrowUpRight, CheckCircle2, FileText, Plug, ShieldAlert } from "lucide-react";
 
 const platforms = [
   {
@@ -44,6 +36,18 @@ const platforms = [
     guideUrl: "https://github.com/sooperset/mcp-atlassian",
     guideLabel: "Atlassian MCP (mcp-atlassian)",
   },
+  {
+    slug: "gitlab",
+    label: "CLARA for GitLab",
+    repo: links.gitlab,
+    repoLabel: "Access repo",
+    body: "For programmes whose knowledge base lives in the GitLab project wiki. Artefacts file back as wiki pages written through git, with folders and sidebar links carrying the hierarchy, and field notes cited by Session ID.",
+    mcp: "GitLab MCP",
+    connect:
+      "CLARA reads and searches through the GitLab MCP, but writes to the wiki through git, so she also needs a shell with git and credentials that can push to the project's wiki (Developer role or above).",
+    guideUrl: "https://docs.gitlab.com/user/gitlab_duo/model_context_protocol/mcp_server/",
+    guideLabel: "GitLab MCP server guide",
+  },
 ];
 
 const youNeed = [
@@ -55,7 +59,7 @@ const youNeed = [
   {
     icon: Plug,
     title: "Knowledge-base MCP",
-    body: "Already wired into your LLM. CLARA does not require a separate connector — she uses whichever knowledge-base MCP (Plane, Confluence, and the like) your stack provides.",
+    body: "Already wired into your LLM. CLARA does not require a separate connector — she uses whichever knowledge-base MCP (Plane, Confluence, GitLab, and the like) your stack provides.",
   },
   {
     icon: CheckCircle2,
@@ -64,28 +68,10 @@ const youNeed = [
   },
 ];
 
-const keepCurrent = [
-  {
-    icon: GitBranch,
-    title: "SHA-pinned",
-    body: "Each CLARA release stamps a git SHA into the skill file and downstream artefacts. Pin a specific SHA in your config; bump deliberately.",
-  },
-  {
-    icon: RefreshCcw,
-    title: "Rarely changes",
-    body: "CLARA's content updates infrequently — new artefacts, KB convention revisions, persona refinements. No constant churn to keep up with.",
-  },
-  {
-    icon: FileText,
-    title: "One-time per release",
-    body: "Each install is a one-time action per CLARA release. Bump the skill file in your environment when a new SHA ships.",
-  },
-];
-
-export function Deploy() {
+export function PlatformDeploy() {
   return (
-    <section id="deploy" className="border-b border-border bg-bg-subtle">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8 py-20 sm:py-24 lg:py-28 space-y-16">
+    <section id="deploy" className="bg-bg">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 py-16 sm:py-20 lg:py-24 space-y-16">
         {/* Header */}
         <div className="max-w-2xl space-y-4">
           <Text
@@ -96,7 +82,7 @@ export function Deploy() {
           >
             For platform teams
           </Text>
-          <Heading as="h2" size="3xl" className="text-balance">
+          <Heading as="h1" size="3xl" className="text-balance">
             Deploy CLARA in your stack.
           </Heading>
           <Text size="md" variant="muted" className="leading-relaxed">
@@ -113,7 +99,7 @@ export function Deploy() {
 
         {/* What you need */}
         <div className="space-y-6">
-          <Heading as="h3" size="xl">
+          <Heading as="h2" size="xl">
             What you need
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -138,7 +124,7 @@ export function Deploy() {
         {/* Choose your platform */}
         <div className="space-y-6">
           <div className="space-y-2 max-w-2xl">
-            <Heading as="h3" size="xl">
+            <Heading as="h2" size="xl">
               Choose your platform
             </Heading>
             <Text size="sm" variant="muted" className="leading-relaxed">
@@ -147,7 +133,7 @@ export function Deploy() {
             </Text>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {platforms.map((p) => (
               <Card key={p.slug}>
                 <CardHeader>
@@ -195,7 +181,7 @@ export function Deploy() {
         {/* Choose your stack — Tabs */}
         <div className="space-y-6">
           <div className="space-y-2 max-w-2xl">
-            <Heading as="h3" size="xl">
+            <Heading as="h2" size="xl">
               Choose your stack
             </Heading>
             <Text size="sm" variant="muted" className="leading-relaxed">
@@ -277,9 +263,9 @@ export function Deploy() {
         </div>
 
         {/* Verify */}
-        <div className="space-y-6">
+        <div id="verify" className="space-y-6 scroll-mt-20">
           <div className="space-y-2 max-w-2xl">
-            <Heading as="h3" size="xl">
+            <Heading as="h2" size="xl">
               Verify the install
             </Heading>
             <Text size="sm" variant="muted" className="leading-relaxed">
@@ -323,41 +309,6 @@ export function Deploy() {
           </Card>
         </div>
 
-        {/* Keep it current */}
-        <div className="space-y-6">
-          <Heading as="h3" size="xl">
-            Keep it current
-          </Heading>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            {keepCurrent.map(({ icon: Icon, title, body }) => (
-              <Card key={title}>
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-accent">
-                    <Icon className="h-5 w-5" aria-hidden />
-                    <CardTitle className="text-base">{title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <Text size="sm" variant="muted" className="leading-relaxed">
-                    {body}
-                  </Text>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <Text size="sm" variant="subtle" className="pt-2">
-            CLARA source &amp; build artefacts:{" "}
-            <a
-              href={links.repo}
-              className="text-accent hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              github.com/dsta-productops/clara
-            </a>
-            .
-          </Text>
-        </div>
       </div>
     </section>
   );

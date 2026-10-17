@@ -66,6 +66,12 @@ const ALLOWLIST = [
   "http://www.w3.org/2000/svg",
   "http://www.w3.org/1999/xlink",
   "https://github.com/dsta-productops",
+  // The site's own deployed origin — the Quick start's starter prompt points an
+  // LLM at the skill file we host there.
+  "https://dsta-productops.github.io/clara",
+  // MCP setup guides linked (not fetched) from the Deploy section.
+  "https://developers.plane.so/",
+  "https://github.com/sooperset/mcp-atlassian",
 ];
 
 interface Violation {

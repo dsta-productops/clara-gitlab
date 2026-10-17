@@ -1,8 +1,12 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
+// In-page anchors on the home page.
 const navLinks = [
   { href: "#how-it-works", label: "How it works" },
   { href: "#why-clara", label: "Why CLARA" },
-  { href: "#artefacts", label: "Artefacts" },
-  { href: "#deploy", label: "Deploy" },
+  { href: "#skills", label: "Skills" },
+  { href: "#try", label: "Quick start" },
 ];
 
 export function TopNav() {
@@ -27,6 +31,16 @@ export function TopNav() {
               {l.label}
             </a>
           ))}
+          {/* Platform-team deployment lives on its own page, opened in a new tab. */}
+          <Link
+            href="/deploy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 px-3 py-2 text-sm text-fg-muted hover:text-fg transition-colors rounded-md"
+          >
+            For platform teams
+            <ArrowUpRight className="h-3.5 w-3.5 opacity-70" aria-hidden />
+          </Link>
         </nav>
       </div>
     </header>

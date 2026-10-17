@@ -5,6 +5,7 @@
   "description": "Marketing site for CLARA — named for the Latin clarus, 'clear'.",
   "type": "module",
   "scripts": {
+    "generate": "tsx scripts/generate-skill-file.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

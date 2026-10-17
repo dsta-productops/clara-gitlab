@@ -57,8 +57,8 @@ const PLATFORMS: Record<PlatformName, PlatformConfig> = {
     contextKey: 'confluenceContext',
     systemPromptMcp: 'Confluence MCP',
     skillDescription:
-      "CLARA — Confluence Learning & AI Research Assistant. Load this skill (or paste into a system prompt) on any LLM that has Confluence access. CLARA drafts, refines, and files Research artefacts (personas, journey maps, research synthesis, PRDs, capability specs, mission threads, etc.) into the programme's Knowledge Base under a disciplined hierarchy. Users invoke her with `Use CLARA's `<artefact-slug>` for <programme>.`",
-    systemPromptTitle: 'CLARA — Confluence Learning & AI Research Assistant',
+      "CLARA — Research & Design assistant for Confluence. Load this skill (or paste into a system prompt) on any LLM that has Confluence access. CLARA drafts, refines, and files Research artefacts (personas, journey maps, research synthesis, PRDs, capability specs, mission threads, etc.) into the programme's Knowledge Base under a disciplined hierarchy. Users invoke her with `Use CLARA's `<artefact-slug>` for <programme>.`",
+    systemPromptTitle: 'CLARA — Research & Design assistant for Confluence',
   },
 };
 

@@ -43,11 +43,6 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Button>
             </a>
-            <a href="#deploy" className="inline-flex">
-              <Button variant="outline" size="lg">
-                For platform teams
-              </Button>
-            </a>
           </div>
         </div>
       </div>
