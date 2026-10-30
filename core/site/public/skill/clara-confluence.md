@@ -100,7 +100,7 @@ Knowledge Base / {{track}} / <artefact-type> / <name>
 
 - **`Knowledge Base`** — literal page name. The top-level container for all research artefacts produced across the Research, Design, and Test phases in a programme's space. One per space.
 - **`{{track}}`** — the track this artefact belongs to. Tracks vary by programme — workstream, capability area, feature line, sub-system, or any other meaningful slice. If the artefact spans tracks, the literal track name is **`Programme-wide`**.
-- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`). The artefact brief tells you which value to use.
+- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `One-pagers`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`). The artefact brief tells you which value to use.
 - **`<name>`** — the specific artefact, e.g. a persona name, a journey scope, a topic slug.
 
 #### Examples
@@ -210,6 +210,7 @@ The artefact-type folders created at every level (Programme-wide and each track)
 
 9. `Service-blueprints`
 10. `PRDs`
+11. `One-pagers`
 
 **Research phase — engineering programmes additionally get:**
 
@@ -371,6 +372,7 @@ When the user asks for a Research artefact, identify which one applies and follo
 - **`prd-generator`** — draft a v0 PRD from the problem-impact ranking, research synthesis, and prior framing → `Knowledge Base/{{track}}/PRDs/{{prd-title}}`
 - **`prior-knowledge-summariser`** — summarise prior knowledge from past programmes on a specific topic → `Knowledge Base/{{track}}/Prior-knowledge/{{topic}}`
 - **`problem-impact-ranker`** — consolidate the captured problems for a programme into a single ranked Problem-impact analysis — each problem scored on reach, severity, evidence and leverage, grouped into leverage tiers, so the team knows which problem to build for first → `Knowledge Base/{{track}}/Problem-impact-analysis`
+- **`product-strategy-one-pager`** — draft a product strategy one-pager from the PRD and the Knowledge Base, then help the user fill in what the Knowledge Base can't supply (owners, costs, value, VCR, timelines) → `Knowledge Base/{{track}}/One-pagers/{{product-name}}`
 - **`research-synthesiser`** — turn interview transcripts and field observations into a single Research synthesis page covering themes, friction, problem statement, and success criteria → `Knowledge Base/{{track}}/Research-synthesis`
 - **`service-blueprint-drafter`** — draft a service blueprint linking user actions to front-stage and back-stage support → `Knowledge Base/{{track}}/Service blueprints/{{journey-scope}}`
 - **`test-plan-generator`** — draft a complete test plan with scenarios, participants, measurement, and analysis → `Knowledge Base/{{track}}/Test-plans/{{test-name}}`

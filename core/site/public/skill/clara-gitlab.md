@@ -152,7 +152,7 @@ Run these checks in order at write time.
 **Artefact-type vocabulary, created in this order at every track level:**
 
 - **Research, shared:** `Prior-knowledge`, `Interview-guides`, `Field-notes`, `Research-synthesis` (single page), `Personas`, `Journeys`, `Problem-impact-analysis` (single page), `Heuristic-evaluations`.
-- **Research, digital adds:** `Service-blueprints`, `PRDs`.
+- **Research, digital adds:** `Service-blueprints`, `PRDs`, `One-pagers`.
 - **Research, engineering adds:** `Operational-scenarios`, `Capability-specs`, `Mission-threads`.
 - **Design, digital:** `Before-after-journeys`.
 - **Design, engineering:** `Capability-storyboards`.
@@ -177,6 +177,7 @@ Programme-wide/
 ├── Heuristic-evaluations.md
 ├── Service-blueprints.md
 ├── PRDs.md
+├── One-pagers.md
 ├── Before-after-journeys.md
 └── Test-plans.md
 <Track>.md
@@ -305,6 +306,7 @@ Fetch each brief from `https://dsta-productops.github.io/clara/skill/briefs/gitl
 | `operational-scenario-generator` | Engineering | `{{track}}/Operational-scenarios/{{scenario-title}}.md` |
 | `persona-generator` | Both | `{{track}}/Personas/{{persona-name}}.md` |
 | `prd-generator` | Digital | `{{track}}/PRDs/{{prd-title}}.md` |
+| `product-strategy-one-pager` | Digital | `{{track}}/One-pagers/{{product-name}}.md` |
 | `prior-knowledge-summariser` | Both | `{{track}}/Prior-knowledge/{{topic}}.md` |
 | `problem-impact-ranker` | Both | `{{track}}/Problem-impact-analysis.md` |
 | `research-synthesiser` | Both | `{{track}}/Research-synthesis.md` |

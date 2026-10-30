@@ -47,6 +47,7 @@ The artefact-type nodes created at every level (Programme-wide and each track) d
 
 9. `Service-blueprints`
 10. `PRDs`
+11. `One-pagers`
 
 **Research phase — engineering programmes additionally get:**
 

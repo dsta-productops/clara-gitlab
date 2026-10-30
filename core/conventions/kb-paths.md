@@ -20,13 +20,13 @@ Each segment is a Plane **page**, and each level is the `parent_id` of the one b
 @@if confluence@@
 - **`Knowledge Base`** — literal page name. The top-level container for all research artefacts produced across the Research, Design, and Test phases in a programme's space. One per space.
 - **`{{track}}`** — the track this artefact belongs to. Tracks vary by programme — workstream, capability area, feature line, sub-system, or any other meaningful slice. If the artefact spans tracks, the literal track name is **`Programme-wide`**.
-- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`). The artefact brief tells you which value to use.
+- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `One-pagers`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`). The artefact brief tells you which value to use.
 - **`<name>`** — the specific artefact, e.g. a persona name, a journey scope, a topic slug.
 @@endif@@
 @@if plane@@
 - **`Knowledge Base`** — a page at the root of the project (its `parent_id` is empty). The top-level container for all research artefacts produced across the Research, Design, and Test phases in a programme's project. One per project.
 - **`{{track}}`** — the track this artefact belongs to, a page whose `parent_id` is `Knowledge Base`. Tracks vary by programme — workstream, capability area, feature line, sub-system, or any other meaningful slice. If the artefact spans tracks, the literal track name is **`Programme-wide`**.
-- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`), a page whose `parent_id` is the track node. The artefact brief tells you which value to use.
+- **`<artefact-type>`** — the artefact category (e.g. `Personas`, `Journeys`, `Research-synthesis`, `Problem-impact-analysis`, `Heuristic-evaluations`, `Prior-knowledge`, `PRDs`, `One-pagers`, `Before-after-journeys`, `Interview-guides`, `Capability-storyboards`, `Test-plans`, `Field-notes`), a page whose `parent_id` is the track node. The artefact brief tells you which value to use.
 - **`<name>`** — the specific artefact (a persona name, a journey scope, a topic slug), a leaf page whose `parent_id` is the artefact-type node. The artefact's own content lives in this page's body.
 
 ## No title suffix
