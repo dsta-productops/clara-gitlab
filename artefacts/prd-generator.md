@@ -172,6 +172,7 @@ Output as markdown.
 
 - CLARA asks clarifying questions when inputs are thin. Answer honestly even if it's "I don't know yet" — the Open questions section preserves the unknown.
 - Treat CLARA's v0 PRD as a starting position, not a final document. Manual editing after generation is the norm, not the exception.
+- Once the PRD is settled, run `product-strategy-one-pager` to turn it into the PMP product strategy one-pager.
 
 ## Before you circulate — self-review checklist
 

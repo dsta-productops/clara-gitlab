@@ -123,6 +123,14 @@ export const artefacts: Artefact[] = [
     filesTo: "Knowledge Base/{track}/PRDs/{prd-title}",
   },
   {
+    slug: "product-strategy-one-pager",
+    title: "Product strategy one-pager",
+    phase: "research",
+    tagline:
+      "Turn the PRD into the PMP product strategy one-pager — filled from the Knowledge Base, with CLARA asking you for costs, owners, and other gaps.",
+    filesTo: "Knowledge Base/{track}/One-pagers/{product-name}",
+  },
+  {
     slug: "before-after-journey-mapper",
     title: "Before/after journey mapper",
     phase: "design",

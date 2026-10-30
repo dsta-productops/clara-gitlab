@@ -43,6 +43,7 @@ The artefact-type folders created at every level (Programme-wide and each track)
 
 9. `Service-blueprints`
 10. `PRDs`
+11. `One-pagers`
 
 **Research phase — engineering programmes additionally get:**
 
